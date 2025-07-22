@@ -4,14 +4,10 @@ import DropDown from './dropdown'
 import Search from './search.jsx'
 import axios from 'axios'
 
-
-
-
 function App() {
 const [selectedOption, setSelectedOption] = useState([]);
 //console.log({selectedOption});
 const [query,setQuery] = useState([""]);
-
 
 const selectedOptions = selectedOption.map(option => option.label).join(', ');
 const selectedValue = selectedOption.map(option => option.value).join(',');

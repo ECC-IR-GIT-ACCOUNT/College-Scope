@@ -1,8 +1,9 @@
 [
   { "value": "id", "label": "Unit ID for institution" },
   { "value": "school.name", "label": "School Name" },
-  {"value": "school.zip", "label": "ZIP CODE"},
-  {"value": "latest.completion.completion_rate_less_than_4yr_150nt", "label": "Completion rate"},
-  {"value": "ope8_id", "label": "Open 8 ID"},
-  {"value":"academics.program.certificate_lt_4_yr.agriculture" , "label": "Agri Data"}
+  { "value": "latest.student.size", "label": "Student Size" },
+  { "value": "latest.cost.tuition.in_state", "label": "In-State Tuition" },
+  { "value": "latest.completion.completion_rate_less_than_4yr_150nt", "label": "Completion Rate (<4yr, 150% time)" },
+  { "value": "latest.student.retention_rate.lt_four_year.full_time", "label": "Full-Time Retention Rate (<4yr)" },
+  { "value": "latest.student.retention_rate.lt_four_year.part_time", "label": "Part-Time Retention Rate (<4yr)" }
 ]
