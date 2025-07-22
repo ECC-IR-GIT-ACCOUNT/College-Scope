@@ -3,7 +3,7 @@ const express = require('express');
 const app  = express();
 const cors = require('cors');
 
-const APIKEY = ""; 
+const APIKEY = "";
 
 const corsOptions = {
     origin: "http://localhost:5173"
