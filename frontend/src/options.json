@@ -1,0 +1,8 @@
+[
+  { "value": "id", "label": "Unit ID for institution" },
+  { "value": "school.name", "label": "School Name" },
+  {"value": "school.zip", "label": "ZIP CODE"},
+  {"value": "latest.completion.completion_rate_less_than_4yr_150nt", "label": "Completion rate"},
+  {"value": "ope8_id", "label": "Open 8 ID"},
+  {"value":"academics.program.certificate_lt_4_yr.agriculture" , "label": "Agri Data"}
+]

@@ -1,0 +1,54 @@
+/* DropDown.css */
+
+.dropdown-wrapper {
+  margin: 1.5rem 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dropdown-wrapper h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.react-select__control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 2px;
+  box-shadow: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.react-select__control:hover {
+  border-color: #3366cc;
+}
+
+.react-select__control--is-focused {
+  border-color: #3366cc;
+  box-shadow: 0 0 0 3px rgba(51, 102, 204, 0.2);
+}
+
+.react-select__multi-value {
+  background-color: #e0f0ff;
+  border-radius: 4px;
+}
+
+.react-select__multi-value__label {
+  color: #003366;
+}
+
+.react-select__multi-value__remove {
+  color: #3366cc;
+  cursor: pointer;
+}
+
+.react-select__multi-value__remove:hover {
+  background-color: #cce0ff;
+  color: #003366;
+}
+
+.dropdown-wrapper p {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 0.95rem;
+}

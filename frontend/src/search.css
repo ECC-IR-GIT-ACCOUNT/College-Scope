@@ -1,0 +1,19 @@
+.search-wrapper {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+  border-color: #3366cc;
+  box-shadow: 0 0 5px rgba(51, 102, 204, 0.3);
+  outline: none;
+}
