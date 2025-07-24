@@ -1,5 +1,5 @@
 import Select from 'react-select';
-import './dropdown.css';
+//import './dropdown.css';
 import optionArray from './options.json';
 
 function DropDown({ selectedOption, setSelectedOption }) {

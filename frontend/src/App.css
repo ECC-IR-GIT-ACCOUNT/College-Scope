@@ -1,42 +1,360 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Main App Container */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left Panel - Controls */
+.left-panel {
+  width: 350px;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+/* Right Panel - Results */
+.right-panel {
+  flex: 1;
+  min-height: 500px;
+}
+
+/* Search Component Styles */
+.search-wrapper {
+  margin-bottom: 24px;
+}
+
+.search-wrapper h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  color: #2d3748;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Dropdown Component Styles */
+.dropdown-wrapper {
+  margin-bottom: 24px;
+}
+
+.dropdown-wrapper h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+/* React Select Custom Styles */
+.react-select__control {
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  min-height: 45px !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.react-select__control:hover {
+  border-color: #cbd5e0 !important;
+}
+
+.react-select__control--is-focused {
+  border-color: #4299e1 !important;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1) !important;
+}
+
+.react-select__value-container {
+  padding: 4px 12px !important;
+}
+
+.react-select__placeholder {
+  color: #a0aec0 !important;
+}
+
+.react-select__multi-value {
+  background-color: #e6fffa !important;
+  border-radius: 6px !important;
+}
+
+.react-select__multi-value__label {
+  color: #234e52 !important;
+  font-weight: 500 !important;
+}
+
+.react-select__multi-value__remove {
+  color: #234e52 !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.react-select__multi-value__remove:hover {
+  background-color: #b2f5ea !important;
+  color: #234e52 !important;
+}
+
+.react-select__option {
+  padding: 12px !important;
+}
+
+.react-select__option--is-focused {
+  background-color: #ebf8ff !important;
+  color: #2b6cb0 !important;
+}
+
+.react-select__option--is-selected {
+  background-color: #4299e1 !important;
+}
+
+/* Selected values display */
+.dropdown-wrapper p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Button Styles */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: #4299e1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3182ce;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+/* Results Section */
+.results-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.results-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+/* Data Cards Grid */
+.data-section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.data-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.data-card {
+  background: linear-gradient(135deg, #fff 0%, #f7fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 280px;
+  min-width: 280px;
+  max-width: calc(33.333% - 16px);
+}
+
+.data-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e0;
+}
+
+.data-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4299e1, #63b3ed);
+}
+
+.card-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #718096;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1.2;
+}
+
+/* Color variations for different data types */
+.data-card.percentage::before {
+  background: linear-gradient(90deg, #48bb78, #68d391);
+}
+
+.data-card.integer::before {
+  background: linear-gradient(90deg, #ed8936, #f6ad55);
+}
+
+.data-card.text::before {
+  background: linear-gradient(90deg, #9f7aea, #b794f6);
+}
+
+.data-card.null::before {
+  background: linear-gradient(90deg, #f56565, #fc8181);
+}
+
+.percentage .card-value {
+  color: #38a169;
+}
+
+.integer .card-value {
+  color: #dd6b20;
+}
+
+.text .card-value {
+  color: #805ad5;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.null .card-value {
+  color: #e53e3e;
+  font-style: italic;
+}
+
+/* Empty state */
+.empty-state {
   text-align: center;
+  padding: 60px 20px;
+  color: #a0aec0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.empty-state h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #718096;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.empty-state p {
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+    padding: 16px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .left-panel {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  
+  .data-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-value {
+    font-size: 20px;
+  }
 }

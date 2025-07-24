@@ -1,5 +1,5 @@
-//import React from 'react';
-import './search.css';
+
+//import './search.css';
 
 function Search({ query, setQuery }) {
   return (
