@@ -4,6 +4,9 @@ import DropDown from './dropdown';
 import Search from './search.jsx';
 import axios from 'axios';
 
+const URL = import.meta.env.VITE_URL;
+
+
 function App() {
   const [selectedOption, setSelectedOption] = useState([]);
   const [query, setQuery] = useState('');
@@ -17,7 +20,8 @@ function App() {
   };
 
   const sendingData = async () => {
-    const response = await axios.post('http://localhost:5000/api', payload);
+    
+    const response = await axios.post(URL, payload);
     setData(response.data);
   };
 
