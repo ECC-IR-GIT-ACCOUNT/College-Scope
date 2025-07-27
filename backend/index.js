@@ -5,11 +5,12 @@ const app  = express();
 const cors = require('cors');
 require('dotenv').config();
 
-const APIKEY = process.env.API_Key;
+// Hardcode your API key here
+const APIKEY = "YOUR_ACTUAL_API_KEY_HERE"; // Replace with your real API key
 const PORT = process.env.PORT||5000;
 
 const corsOptions = {
-    origin: ["http://localhost:5173", "https://your-app-name.onrender.com"] // Allow both local dev and production
+    origin: ["http://localhost:5173", "https://college-scope.onrender.com"] // Allow both local dev and production
 }
 
 app.use(cors(corsOptions));
@@ -51,7 +52,7 @@ app.post('/api', async (req, res) => {
     const inputArray = req.body.values;
     
     try {
-        const response = await axios.get(`https://api.data.gov/ed/collegescorecard/v1/schools?api_key=${encodeURI(APIKEY)}&school.name=${schoolName}&fields=${fieldsString}`);
+        const response = await axios.get(`https://api.data.gov/ed/collegescorecard/v1/schools?api_key=${APIKEY}&school.name=${encodeURIComponent(schoolName)}&fields=${fieldsString}`);
         console.log(`APIs Response`);
         const apiResponse = response.data.results[0];// The data with index 0 is the best match returned by the API for a query
         
