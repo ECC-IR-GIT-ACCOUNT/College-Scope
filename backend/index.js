@@ -5,10 +5,10 @@ const cors = require('cors');
 require('dotenv').config();
 
 const APIKEY = process.env.API_Key;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT||5000;
 
 const corsOptions = {
-    origin: "http://localhost:5173"
+    origin: "https://college-scope.onrender.com" // need to be replaced with the actual frontend render URL
 }
 
 app.use(cors(corsOptions));
