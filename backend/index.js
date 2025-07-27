@@ -4,6 +4,8 @@ const app  = express();
 const cors = require('cors');
 require('dotenv').config();
 
+// Hey there
+
 const APIKEY = process.env.API_Key;
 const PORT = process.env.PORT;
 
