@@ -5,11 +5,11 @@ const app  = express();
 const cors = require('cors');
 require('dotenv').config();
 
-const APIKEY = "qcHfgGcts5WZjVl0g3Oto94ePEDB8Bg06sMgDCJW";
+const APIKEY = process.env.API_KEY;
 const PORT = process.env.PORT||5000;
 
 const corsOptions = {
-    origin: ["http://localhost:5173", "https://your-app-name.onrender.com"] // Allow both local dev and production
+    origin: ["http://localhost:5173", "https://college-scope.onrender.com"] // Allow both local dev and production
 }
 
 app.use(cors(corsOptions));
