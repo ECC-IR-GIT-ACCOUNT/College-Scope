@@ -49,7 +49,12 @@ app.post('/api', async (req, res) => {
     const schoolName = req.body.querries;
     const fieldsString = req.body.valuesString;
     const inputArray = req.body.values;
-    
+
+    if(!req.body.valuesString||req.body.valuesString.trim() === ''){
+        return res.status(400).json({ message: "Please select the Options!" });
+
+    }
+
     try {
         const response = await axios.get(`https://api.data.gov/ed/collegescorecard/v1/schools?api_key=${encodeURI(APIKEY)}&school.name=${schoolName}&fields=${fieldsString}`);
         console.log(`APIs Response`);
@@ -109,6 +114,7 @@ app.post('/api', async (req, res) => {
         console.log(`Getting Some Error!: ${error}`);
         res.status(500).json({Error: `Not being able to get Data from API, check field Name & School Name`});
     }
+
 });
 
 // Catch all handler: send back React's index.html file for any non-API routes (production only)
