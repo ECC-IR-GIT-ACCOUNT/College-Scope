@@ -112,7 +112,7 @@ app.post('/api', async (req, res) => {
 
     } catch(error) {
         console.log(`Getting Some Error!: ${error}`);
-        res.status(500).json({Error: `Not being able to get Data from API, check field Name & School Name`});
+        res.status(500).json({message: `Not being able to get Data from API, check field Name & School Name`});
     }
 
 });
