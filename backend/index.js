@@ -1,3 +1,4 @@
+console.log("Starting the Server file")
 const axios = require(`axios`);
 const express = require('express');
 const app  = express();
@@ -19,10 +20,18 @@ app.use(express.json());
 
 app.post ('/api',async (req,res)=> {
     console.log("Working");
-    console.log(req.body.values);// working geting the whole array in json form
-    console.log(req.body.querries);// Showing the school Being searched
+    console.log(req.body.values);
+    console.log("2")// working geting the whole array in json form
+    console.log(req.body.querries);
+    console.log("3")// Showing the school Being searched
     console.log(req.body.valuesString);// value of the user selected label
 
+    if(!req.body.valuesString||req.body.valuesString.trim() === ''){
+        return res.status(400).json({ message: "Please select the Options!" });
+
+    }
+    
+    else{
     const schoolName = req.body.querries;
     const fieldsString = req.body.valuesString;
     const inputArray = req.body.values;
@@ -87,8 +96,10 @@ app.post ('/api',async (req,res)=> {
     }
     catch(error){
         console.log(`Getting Some Error!: ${error}`);
-        res.status(500).json({Error:`Not Being able to get Data from API, check field Name & School Name`});
+
+        res.status(500).json({message:`Not Being able to get Data from API, check field Name & School Name`});
     }
+}
 
     
 })
