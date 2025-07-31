@@ -20,9 +20,13 @@ function App() {
   };
 
   const sendingData = async () => {
-    
+    try{
     const response = await axios.post(URL, payload);
     setData(response.data);
+    }
+    catch(error){
+      alert(error.response.data.message);
+    }
   };
 
   const handleChange2 = (event) => {
