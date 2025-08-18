@@ -65,7 +65,7 @@ function App() {
                   {data.float.map((item, index) => (
                     <div key={index} className="data-card percentage">
                       <div className="card-label">{item.key}</div>
-                      <div className="card-value">{(item.result * 100).toFixed(2)}%</div>
+                      <div className="card-value">{Math.round((item.result * 100))}%</div>
                     </div>
                   ))}
                 </div>

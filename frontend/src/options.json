@@ -12,5 +12,5 @@
   { "value": "latest.completion.outcome_percentage_suppressed.all_students.8yr.award_pooled", "label": "8-Year Award Rate (All Students, Pooled)" },
   { "value": "latest.completion.outcome_percentage_suppressed.all_students.8yr.transfer_pooled", "label": "8-Year Transfer Rate (All Students, Pooled)" },
   { "value": "latest.aid.dcs_pell_grant_rate_pooled", "label": "Pell Grant Recipient Rate (Pooled)" },
-  { "value": "latest.repayment.2_yr_bb_fed_repayment_suppressed.ug.default", "label": "2-Year Federal Loan Repayment Rate (UG, Pooled)" }
+  { "value": "latest.repayment.2_yr_bb_fed_repayment_suppressed.ug.default", "label": "Student Loan Default Rate (All Students)" }
 ]
