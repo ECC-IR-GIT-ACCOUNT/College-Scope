@@ -73,7 +73,6 @@ function App() {
             )}
 
             {/* Integer Data */}
-            {/* Integer Data */}
             {data.int && data.int.length > 0 && (
               <div className="data-section">
                 <h3 className="section-title">🔢 Numerical Values</h3>
