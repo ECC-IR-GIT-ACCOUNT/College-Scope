@@ -78,10 +78,17 @@ function App() {
                 <h3 className="section-title">🔢 Numerical Values</h3>
                 <div className="data-grid">
                   {data.int.map((item, index) => (
-                    <div key={index} className="data-card integer">
+                      (item.key==="Unit ID for Institution") ? ( 
+                        <div key={index} className="data-card integer">
+                        <div className="card-label">{item.key}</div>
+                      <div className="card-value">{item.result}</div>
+                      </div>
+                      ) :(
+                        <div key={index} className="data-card integer">
                       <div className="card-label">{item.key}</div>
                       <div className="card-value">{item.result.toLocaleString()}</div>
-                    </div>
+                      </div>
+                      ) 
                   ))}
                 </div>
               </div>
