@@ -9,7 +9,7 @@ const APIKEY = process.env.API_KEY;
 const PORT = process.env.PORT||5000;
 
 const corsOptions = {
-    origin: ["http://localhost:5173", "https://college-scope.onrender.com"] // Allow both local dev and production
+    origin: ["http://localhost:5173", "https://college-scope-utpf.onrender.com"] // Allow both local dev and production
 }
 
 app.use(cors(corsOptions));
